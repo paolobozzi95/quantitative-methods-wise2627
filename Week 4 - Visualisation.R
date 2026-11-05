@@ -13,14 +13,6 @@ summary(df)
 
 
 
-
-
-
-
-
-
-
-
 library(dplyr)
 df <- credit |>
   mutate(share_subsidy = crediti_agevolati / credit_total)
