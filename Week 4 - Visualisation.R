@@ -27,12 +27,13 @@ boxplot(share_subsidy ~ year, data = df,
 
 library(ggplot2)
 
-ggplot(df, aes(x = factor(year), y = share_subsidy)) +
-  geom_boxplot(fill = "grey85", outlier.shape = 21) +
-  stat_summary(fun = mean, geom = "point", shape = 4, size = 2.5) +  # mean as ×
+
+ggplot(df, aes(x = factor(year), y = share_subsidy, fill = factor(year))) +
+  geom_boxplot(outlier.shape = 21) +
+  #stat_summary(fun = mean, geom = "point", shape = 3, size = 2.5) +
+  scale_fill_brewer(palette = "Set2", guide = "none") +
   scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
   labs(x = NULL,
        y = "Share of subsidised credit",
        title = "Share of subsidised credit by province, 1982–1988") +
-  theme_minimal()
-
+  theme_classic()
