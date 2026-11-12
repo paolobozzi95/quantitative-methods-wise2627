@@ -10,14 +10,18 @@ y <- c("Raoul", "Louisa",
 z <- as.character(x)
 
 
-concentrated <- c(6,7,8,5, 9,10, 4)
+concentrated <- c(6,7,8,5, 9,10, 4, 1, 1, 1, 11)
 mean(concentrated)
 
-dispersed <- c(1, 1, 1, 1, 1, 1, 1, 1, 1, 61)
+dispersed <- c(1, 1, 1, 1, 1, 1, 1, 1, 1, 61, 32)
 mean(dispersed)
 
 sd(concentrated)
 sd(dispersed)    #I calculate the standard deviation
+
+
+plot <- plot(concentrated, dispersed)
+#save as png
 
 
 #Data analysis public credit in Italy
