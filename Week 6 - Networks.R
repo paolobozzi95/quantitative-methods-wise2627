@@ -5,8 +5,6 @@ library(tidyverse)
 #install.packages("tibble")
 library(statnet) 
 
-#install package to read rda file
-library(foreign)
 
 
 
@@ -140,6 +138,8 @@ gplot(df_net,
 
 #visualize the data
 #View(Moreno)
+#install package to read rda file
+library(foreign)
 
 
 #load .rda file
